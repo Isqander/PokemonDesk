@@ -16,3 +16,9 @@ interface MyHometask {
     simeArray: (number|string)[],
     withData: object[],
 }
+
+interface MyArray<T> {
+    [N: number]: T;
+
+    reduce<U>(fn: (ar: T[]) => U) : U;
+}
