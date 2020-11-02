@@ -20,5 +20,5 @@ interface MyHometask {
 interface MyArray<T> {
     [N: number]: T;
 
-    reduce<U>(fn: (ar: T[]) => U) : U;
+    reduce<U>(fn: (previousValue: U, currentValue: T, currentIndex: number, array: T[]) => U, initValue: U): U;
 }
